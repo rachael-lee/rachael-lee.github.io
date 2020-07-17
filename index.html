@@ -10,13 +10,20 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=EB+Garamond" />
+  <style type="text/css">
+.custom {
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	color: black;
+	font-size:20px;
+}
+</style>
 </head>
 
 <body style="background-color:#fff2e6;">
    
   <main>
     <section>
+      <div class="myclass">
       <h1>Rachael S. Lee</h1>
       <p>Here's what I'm thinking about:</p>
       <ul>
@@ -32,7 +39,14 @@
       </ul>
       <br>
       <p>I'm currently building for government partners at <a href="https://www.google.com/">US Digital Response</a>.
-    </section>
+    </div>
+
+.myclass {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+        </section>
     
   </main>
  
