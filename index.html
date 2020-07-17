@@ -2,6 +2,15 @@
 <!doctype html>
 <html>
 
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+	
 <head>
   <meta charset="utf-8">
   <title>Rachael S. Lee</title>
@@ -10,20 +19,22 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <style type="text/css">
-.custom {
-	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-	color: black;
-	font-size:20px;
-}
-</style>
+	
 </head>
 
 <body style="background-color:#fff2e6;">
-   
+  <style type="text/css">
+.custom {
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	color: red;
+	font-size:40px;
+}
+
+	  <div class="container">
+  <div>
   <main>
     <section>
-      <div class="myclass">
+
       <h1>Rachael S. Lee</h1>
       <p>Here's what I'm thinking about:</p>
       <ul>
@@ -39,17 +50,12 @@
       </ul>
       <br>
       <p>I'm currently building for government partners at <a href="https://www.google.com/">US Digital Response</a>.
-    </div>
-
-.myclass {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
+	  
         </section>
     
   </main>
- 
+ </div>
+</div>
 </body>
-
+</style>
 </html>
