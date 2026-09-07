@@ -169,27 +169,44 @@ dialog::backdrop {
   font-size: 0.97rem;
 }
 
-.dialog-body h4 + dl {
-  margin-top: -0.2rem;
+.project-card {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-top: 0.85rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.dialog-body dt {
+.project-card:hover {
+  border-color: var(--accent);
+  color: inherit;
+}
+
+.project-title {
+  display: block;
   font-weight: 500;
-  margin-top: 1.3rem;
-}
-
-.dialog-body dt a {
+  line-height: 1.4;
   color: var(--ink);
 }
 
-.dialog-body dt a:hover {
+.project-title span {
+  color: var(--muted);
+  font-size: 0.85em;
+  transition: color 0.15s ease;
+}
+
+.project-card:hover .project-title,
+.project-card:hover .project-title span {
   color: var(--accent);
 }
 
-.dialog-body dd {
-  margin: 0.15rem 0 0;
+.project-desc {
+  display: block;
+  margin-top: 0.25rem;
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
@@ -209,6 +226,15 @@ dialog::backdrop {
 
 .dialog-close:hover {
   color: var(--ink);
+}
+
+.dialog-close:focus {
+  outline: none;
+}
+
+.dialog-close:focus-visible {
+  outline: 1px solid var(--accent);
+  border-radius: 3px;
 }
 
 @media (max-width: 480px) {
