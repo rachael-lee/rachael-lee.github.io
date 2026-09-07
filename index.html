@@ -5,43 +5,66 @@
 <title>Rachael Sol Lee</title>
 <meta name="description" content="Somewhere someone is traveling furiously toward you.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/style4.css">
-<link rel="alternate" type="application/atom+xml" href="/en.atom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="/style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 </head>
-<body id="home">
-<header id="masthead"><a href="/" title="Rachael Sol Lee">Rachael Sol Lee</a></header>
+<body>
 <main>
-<section id=aboutme>
 
-<p>
-  Professional experience and contact information <a href="https://www.linkedin.com/in/leerac/">here</a>.
-</p>
+<header>
+<h1>Rachael Sol Lee</h1>
+</header>
+
+<section>
+<h2>Now</h2>
+<p>I lead deployments&thinsp;&mdash;&thinsp;we are building the AI-native operating system for regulated finance.</p>
+<p><a href="https://www.linkedin.com/in/leerac/">Reach out</a> to learn more.</p>
 </section>
 
-<section id=portfolio>
-<h2>Investing</h2>
-<p>I currently invest at <a href="https://salmiraif.com/">Salmira</a>. We are multi-strategy investors with a flexible mandate.</p>
+<section>
+<h2>Previously</h2>
+<p>Private equity investor in software, consumer, film, and everything in-between. Independently, I advise on investment due diligence, as well as start-up fundraising and strategy.</p>
 
-<h2>Consulting</h2>
-<p>I advise on an ad hoc basis. Recent work has been in investment due diligence, education technology, and start-up fundraising / strategy. 
-  At Bain, I also worked in software and healthcare strategy. 
-  At the moment, I'm kept busy full-time as an investor, but happy to connect to see if we can work together in other ways or to recommend friends who do similar work.
-  </p>
-  
-<h2>Product Management</h2>
+<p class="projects-cta"><button type="button" class="projects-button" data-dialog="projects-dialog">Selected projects<span aria-hidden="true">&#8599;</span></button></p>
+</section>
+
+</main>
+
+<dialog id="projects-dialog">
+<div class="dialog-body">
+<button type="button" class="dialog-close" aria-label="Close">&times;</button>
+<h4>Projects</h4>
 <dl>
-  <dt><a href="https://quizlet.com/">Quizlet Referral Program</a></dt>
-  <dd>Led the launch of our first student referrals program in 2020 to 50 million monthly active users</dd>
-  <dt><a href="https://www.usdigitalresponse.org/case-studies/modernizing-the-neighborhood-court">District Attorney Case Management System</a></dt>
-  <dd>Led build of contact management solution to expand restorative justice program</dd>
-  <dt><a href="https://www.azed.gov/sites/default/files/media/ROADMAP%20FOR%20REOPENING%20SCHOOLS-091820.pdf">Arizona Department of Education COVID Communications</a></dt>
-  <dd>Led revamp of COVID response roadmap and information dispersion</dd>
+<dt><a href="https://quizlet.com/">Quizlet Referral Program</a></dt>
+<dd>Led the launch of Quizlet&rsquo;s first student referrals program, reaching 50&nbsp;million monthly active users</dd>
+<dt><a href="https://www.usdigitalresponse.org/case-studies/modernizing-the-neighborhood-court">District Attorney Case Management System</a></dt>
+<dd>Led the build of a contact management solution to expand a restorative justice program</dd>
+<dt><a href="https://www.azed.gov/sites/default/files/media/ROADMAP%20FOR%20REOPENING%20SCHOOLS-091820.pdf">Arizona Department of Education COVID Communications</a></dt>
+<dd>Led the revamp of the COVID response roadmap and public information effort</dd>
 </dl>
-</section>
+</div>
+</dialog>
 
-</main></body></html>
-
+<script>
+document.querySelectorAll("button[data-dialog]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    document.getElementById(button.dataset.dialog).showModal();
+  });
+});
+document.querySelectorAll("dialog").forEach(function (dialog) {
+  dialog.addEventListener("click", function (event) {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.querySelector(".dialog-close").addEventListener("click", function () {
+    dialog.close();
+  });
+});
+</script>
+</body>
+</html>

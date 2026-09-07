@@ -1,0 +1,221 @@
+/* solrl.com — quiet editorial */
+
+:root {
+  --bg: #faf8f5;
+  --ink: #22201d;
+  --muted: #716c64;
+  --rule: #e3ded6;
+  --accent: #7c5f3f;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --ink: #e9e5df;
+    --muted: #9a948a;
+    --rule: #322f2a;
+    --accent: #c2a37c;
+  }
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 7rem;
+}
+
+header {
+  margin-bottom: 4.5rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.4rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 2rem 0 0.4rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+section + section {
+  border-top: 1px solid var(--rule);
+  padding-top: 3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.projects-cta {
+  margin-top: 1.8rem;
+}
+
+.projects-button {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.5rem 1.15rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.projects-button span {
+  color: var(--muted);
+  font-size: 0.85em;
+  transition: color 0.15s ease;
+}
+
+.projects-button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.projects-button:hover span {
+  color: var(--accent);
+}
+
+dialog {
+  margin: auto;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  max-width: 30rem;
+  width: calc(100% - 3rem);
+  padding: 0;
+  box-shadow: 0 16px 48px rgba(20, 18, 15, 0.18);
+}
+
+dialog::backdrop {
+  background: rgba(20, 18, 15, 0.45);
+}
+
+.dialog-body {
+  padding: 2rem 2.2rem 2.2rem;
+}
+
+.dialog-body h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.8rem;
+  padding-right: 1.5rem;
+}
+
+.dialog-body p {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+.dialog-body h4 + dl {
+  margin-top: -0.2rem;
+}
+
+.dialog-body dt {
+  font-weight: 500;
+  margin-top: 1.3rem;
+}
+
+.dialog-body dt a {
+  color: var(--ink);
+}
+
+.dialog-body dt a:hover {
+  color: var(--accent);
+}
+
+.dialog-body dd {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  font: inherit;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 3.5rem 1.25rem 5rem;
+  }
+  header {
+    margin-bottom: 3rem;
+  }
+}
